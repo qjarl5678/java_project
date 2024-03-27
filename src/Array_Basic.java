@@ -28,7 +28,6 @@ public class Array_Basic {
         int[] myArray2 = {1,2,3,4,5};
         System.out.println(myArray2[3]);
 
-
         // 다차원 배열              0            1           2           3           4
         int[][] myArray3 = {
                 {1,2,3,4,5},
