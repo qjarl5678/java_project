@@ -1,12 +1,17 @@
-interface Predator {
-    String getFood();
+abstract class Predator extends Animal{
+    abstract String getFood();
+
+     void printFood(){
+         //default를 제거한다. - 인터페이스에서 추상화 클래스로 변경했기 때문에 default method는 더이상 사용할 수 없습니다.
+        System.out.printf("my food is %s\n", getFood());
+    }
 }
 
 interface Barkable{
     void bark();
 }
 
-class Tiger extends Animal implements Predator, Barkable{
+class Tiger extends Predator implements Barkable{
     public String getFood(){
         return "apple";
     }
@@ -15,7 +20,7 @@ class Tiger extends Animal implements Predator, Barkable{
     }
 }
 
-class Lion extends Animal implements Predator, Barkable {
+class Lion extends Predator implements Barkable {
     public String getFood() {
         return "banana";
     }
