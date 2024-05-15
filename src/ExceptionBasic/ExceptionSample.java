@@ -12,11 +12,21 @@ public class ExceptionSample {
         //br.close();
 
         // ArithmeticException
-        //int c = 4/0;
+        int c;
+        try{
+            c = 4/0; // 여기가 에러 나는 곳
+        }catch (ArithmeticException e){
+            c = -1;
+        } finally {
+            // Exception에 상관없이 반드시 수행함
+            System.out.println("~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~");
+        }
+
+        System.out.println(c);
 
         //ArrayIndexOutOfBoundsException
-        int[] a = {1,2,3};
-        System.out.println(a[3]);
+        //int[] a = {1,2,3};
+        //System.out.println(a[3]);
 
     }
 }
